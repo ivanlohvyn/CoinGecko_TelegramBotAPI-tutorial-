@@ -41,7 +41,9 @@ Create telegram bot with [BotFather](https://core.telegram.org/bots#3-how-do-i-c
 
 ### Create app
 Update *main.py* with the following code to test local server:
-```
+
+```python
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -100,7 +102,7 @@ Save file, open *Web* tab, reload and open web app. Web page will show text from
 (.venv)$ pip install flask-sslify
 ```
 Update file main.py with following code:
-```
+```python
 from flask import Flask
 from flask_sslify import SSLify
 
@@ -127,7 +129,7 @@ Import [*requests*](https://pypi.org/project/requests/) library on your computer
 ```
 
 To get general data about created telegram bot, update main.py with code below:
-```
+```python
 import requests
 from flask import Flask
 
@@ -146,7 +148,7 @@ if __name__ == "__main__":
 ```
 
 Run the file and in terminal you will see a data about telegram bot, represented as python dictionary. Record recieved data to [json](https://docs.python.org/3.7/library/json.html) formate file using following code:
-```
+```python
 import json
 
 import requests
@@ -171,7 +173,7 @@ if __name__ == "__main__":
 ```
 
 Update telegram bot data with [*getUpdates*](https://core.telegram.org/bots/api#getupdates) method:
-```
+```python
 import json
 
 import requests
@@ -202,7 +204,7 @@ if __name__ == "__main__":
 > Note: Check it, starting your telegram bot, and send some message -- function get_updates will return nested python dictionary with latest data. Updated data will be automatically written in bot_data.json file
 
 Using identificationl information from recieved data, we can send message to telegram bot with [*sendMessage*](https://core.telegram.org/bots/api#sendmessage) method directly from code editor:
-```
+```python
 import json
 
 import requests
@@ -256,7 +258,7 @@ Past the line in new web browser window -- the answer must be "Webhook was set".
 
 
 After that update code in *main.py* with POST and GET methods:
-```
+```python
 import json
 
 import requests
@@ -305,7 +307,7 @@ if __name__ == "__main__":
 
 
 Update *index* function to parse new data in bot_data.json.
-```
+```python
 import json
 
 import requests
@@ -362,7 +364,7 @@ if __name__ == "__main__":
 [*CoinGecko*](https://www.coingecko.com/en/api) has powerfull and free API, so no personal API keys required.
 
 Update file main.py with following code:
-```
+```python
 import json
 import requests
 
@@ -420,7 +422,7 @@ if __name__ == "__main__":
 ``` 
 
 To get current price from recieved data from CoinGecko, update get_price function by following code:
-```
+```python
 import json
 
 import requests
@@ -476,7 +478,7 @@ if __name__ == "__main__":
 ```
 
 To get data from website my every crypto, we use module [*re*](https://docs.python.org/3.7/library/re.html):
-```
+```python
 import json
 import re
 
@@ -546,7 +548,7 @@ if __name__ == "__main__":
 
 
 Update code to recieve cryptocurrency with telegram bot:
-```
+```python
 import json
 import re
 
@@ -615,7 +617,7 @@ if __name__ == "__main__":
 
 
 Add SSLify again:
-```
+```python
 import json
 import re
 
