@@ -340,7 +340,7 @@ def index():
     if request.method == "POST":
         r = request.get_json()
         chat_id = r["message"]["chat"]["id"]
-        message = r["message"]["text]
+        message = r["message"]["text"]
 
         if "ethereum" in message:
             send_message(chat_id, text="some text")
@@ -405,7 +405,7 @@ def index():
     if request.method == "POST":
         r = request.get_json()
         chat_id = r["message"]["chat"]["id"]
-        message = r["message"]["text]
+        message = r["message"]["text"]
 
         if "ethereum" in message:
             send_message(chat_id, text="some text")
@@ -461,7 +461,7 @@ def index():
     if request.method == "POST":
         r = request.get_json()
         chat_id = r["message"]["chat"]["id"]
-        message = r["message"]["text]
+        message = r["message"]["text"]
 
         if "ethereum" in message:
             send_message(chat_id, text="some text")
@@ -477,7 +477,8 @@ if __name__ == "__main__":
     main()
 ```
 
-To get data from website my every crypto, we use module [*re*](https://docs.python.org/3.7/library/re.html):
+Using [*re*](https://docs.python.org/3.7/library/re.html) module, we can configure parsing data from web site for each cryptocurrency:
+
 ```python
 import json
 import re
@@ -529,7 +530,7 @@ def index():
     if request.method == "POST":
         r = request.get_json()
         chat_id = r["message"]["chat"]["id"]
-        message = r["message"]["text]
+        message = r["message"]["text"]
 
         if "ethereum" in message:
             send_message(chat_id, text="some text")
@@ -642,7 +643,7 @@ Now open PythonAnywhere *Files* tab, open folder with web app and upload *main.p
 > Note: if web page will show you, that mistakes exists, open *pythonanywhere.com.error.log* and see, what is wrong.
 
 
-Then copy url adrress of web app and set Webhook again with our URL:
+After that copy url adrress of web app and set Webhook again with our URL:
 ```
 https://api.telegram.org/bot<token>/setWebhook?url=https://<username>.pythonanywhere.com/
 ```
